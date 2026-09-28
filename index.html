@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Opening Overlay -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <div class="bismillah-icon">﷽</div>
+            <p class="subtitle">Together with their families</p>
+            <h1 id="overlay-names">Bride & Groom</h1>
+            <p class="date-text" id="overlay-date"></p>
+            <button id="enter-btn">Enter Invitation</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" id="nav-logo">B & G</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#couple">Couple</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-inner">
+                <p class="animate-up">The Wedding of</p>
+                <h2 id="hero-names" class="animate-up">Bride & Groom</h2>
+                <div class="countdown animate-up" id="countdown">
+                    <div class="time-box"><span id="days">00</span><small>Days</small></div>
+                    <div class="time-box"><span id="hours">00</span><small>Hrs</small></div>
+                    <div class="time-box"><span id="mins">00</span><small>Min</small></div>
+                    <div class="time-box"><span id="secs">00</span><small>Sec</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Couple Section -->
+        <section id="couple" class="section">
+            <div class="container">
+                <div class="section-title">The Happy Couple</div>
+                <div class="couple-grid">
+                    <div class="person-card">
+                        <div class="img-frame"><img id="bride-img" src="" alt="Bride"></div>
+                        <h3 id="bride-name"></h3>
+                        <p id="bride-bio"></p>
+                    </div>
+                    <div class="couple-divider">&</div>
+                    <div class="person-card">
+                        <div class="img-frame"><img id="groom-img" src="" alt="Groom"></div>
+                        <h3 id="groom-name"></h3>
+                        <p id="groom-bio"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="section bg-alt">
+            <div class="container">
+                <div class="section-title">Wedding Events</div>
+                <div id="events-container" class="events-grid"></div>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section id="rsvp" class="section">
+            <div class="container">
+                <div class="section-title">Will You Attend?</div>
+                <div class="rsvp-card">
+                    <form id="rsvp-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" name="name" required placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" name="phone" required placeholder="e.g. +91 98765 43210">
+                            </div>
+                            <div class="form-group">
+                                <label>Attendance</label>
+                                <select name="attendance" required>
+                                    <option value="yes">Yes, I will attend</option>
+                                    <option value="no">Sorry, I can't come</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Number of Guests</label>
+                                <input type="number" name="guestCount" min="1" max="10" value="1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Message for the Couple</label>
+                            <textarea name="message" rows="3" placeholder="Your well wishes..."></textarea>
+                        </div>
+                        <button type="submit" id="submit-rsvp">Send RSVP</button>
+                        <p id="rsvp-status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guestbook Section -->
+        <section id="guestbook" class="section bg-alt">
+            <div class="container">
+                <div class="section-title">Guest Wishes</div>
+                <div id="wishes-display" class="wishes-grid">
+                    <!-- Wishes will load here -->
+                </div>
+                <div class="wish-form-container">
+                    <h3>Leave a Wish</h3>
+                    <form id="wish-form">
+                        <input type="text" name="name" required placeholder="Your Name">
+                        <textarea name="message" required placeholder="Your Message"></textarea>
+                        <button type="submit">Submit Wish</button>
+                        <p id="wish-status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Made with Love for</p>
+            <h2 id="footer-names"></h2>
+            <p id="footer-date"></p>
+        </div>
+    </footer>
+
+    <audio id="bg-music" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
