@@ -45,7 +45,7 @@ const weddingData = {
     backend: {
         enabled: true,
         // PASTE YOUR GOOGLE APPS SCRIPT URL HERE
-        googleAppsScriptUrl: "YOUR_DEPLOYED_APPS_SCRIPT_URL_HERE"
+        googleAppsScriptUrl: "https://script.google.com/macros/s/AKfycbyrMn61XPKq5UV65O6MMq2USq7vqrcu3p-ZtG2jvuYZWIZuIYEKo9PwAeaXkyBXkDLKpw/exec"
     }
 };
 
